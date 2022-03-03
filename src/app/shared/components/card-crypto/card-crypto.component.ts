@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { CoinDataService } from 'src/app/core/services/crypto/coin-data.service';
-import { Coin } from '../../types/coin';
+import { Coin, CoinDataService } from 'src/app/core/services/crypto/coin-data.service';
 
 @Component({
   selector: 'app-card-crypto',
@@ -12,7 +11,7 @@ export class CardCryptoComponent implements OnInit {
 
   @Input() crypto: string = '';
 
-  imgUrl: string = 'https://www.cryptocompare.com';
+  imgUrl: string;
   coin: Coin;
 
   constructor(public coinDataService: CoinDataService) { }
@@ -24,9 +23,9 @@ export class CardCryptoComponent implements OnInit {
         let keys = Object.keys(data);
         for(let key of keys) {
           this.coin =  data[key].USD;
-          this.imgUrl = this.imgUrl + data[key].USD.IMAGEURL;
+          this.imgUrl = `https://www.cryptocompare.com${data[key].USD.IMAGEURL}`;
+          console.log(this.imgUrl);
         }
-        console.log(data);
     });
 
   }
