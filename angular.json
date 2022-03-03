@@ -32,11 +32,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],
+            ],         
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+                "src/styles.scss"
+              ]
+            },
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
-            ],          
+            ],
             "scripts": []
           },
           "configurations": {

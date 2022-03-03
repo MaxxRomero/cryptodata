@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/foundation-sites/assets/foundation";
 @include foundation-everything($prototype: true);
+@import "./app/shared/settings/colors";
 
 html, body { height: 100%; background-color: #111015;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-label{
+    color:$text-primary;
+}

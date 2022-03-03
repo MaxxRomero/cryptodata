@@ -1,13 +1,22 @@
 <mat-card class="example-card">
     <mat-card-title-group>
-      <mat-card-title >{{ data?.FROMSYMBOL }}  {{ data?.CHANGEPCT24HOUR }}</mat-card-title>
-      <mat-card-subtitle>{{ data?.PRICE }}</mat-card-subtitle>
+      <mat-card-title class="title">{{ coin?.FROMSYMBOL }}</mat-card-title>
+      <mat-card-subtitle class="margin-top-1">
+        <h4 class="sub-price"><b>{{ coin?.PRICE }}</b></h4>
+        <h3 class="pill-pct" [ngClass]="{'pct-positive': coin?.CHANGEPCT24HOUR > 0, 'pct-negative': coin?.CHANGEPCT24HOUR < 0 }">
+            <span *ngIf="coin?.CHANGEPCT24HOUR > 0;else negative"class="material-icons">arrow_drop_up</span> 
+            <ng-template #negative>
+              <span class="material-icons">arrow_drop_down</span> 
+            </ng-template>
+            {{ coin?.CHANGEPCT24HOUR }}%
+        </h3>
+      </mat-card-subtitle>
       <img mat-card-sm-image [src]="imgUrl">
     </mat-card-title-group>
     <mat-card-content>
-    <div class="flex-container flex-dir-column margin-top-2">
-        <h4>Highest 24hs: {{ data?.HIGH24HOUR }}</h4>
-        <h4>Lower 24hs: {{ data?.LOW24HOUR }}</h4>
+    <div class="flex-container flex-dir-column">
+        <h4 class="text-secondary"><span class="material-icons arrow-positive">arrow_drop_up</span><span class="tag">24hs:</span> <b>{{ coin?.HIGH24HOUR }}</b></h4>
+        <h4 class="text-secondary"><span class="material-icons arrow-negative">arrow_drop_down</span><span class="tag">24hs:</span>  <b>{{ coin?.LOW24HOUR }}</b></h4>
     </div>
     </mat-card-content>
   </mat-card>

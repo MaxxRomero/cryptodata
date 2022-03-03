@@ -1,7 +1,59 @@
+@import "../../settings/colors";
+
 .example-card{
     background-color: transparent;
-    border: 1px solid #6f675b;
+    border: 1px solid $border-color;
     border-radius: 10px;
-    color: #d3dff4;
+    color: $text-primary;
     height: 250px;
 }
+
+.title{
+    color: #b163f9;
+}
+
+.sub-price{
+    color: $text-primary;
+    font-size: 26px;
+}
+
+.pill-pct{
+    border-radius: 10px;
+    color: $text-primary;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0px 8px 0px 3px;
+}
+
+.pct-positive{
+    background-color: green;
+}
+
+.pct-negative{
+    background-color: red;
+}
+
+.material-icons{
+    vertical-align: middle;
+}
+
+.arrow-positive{
+    color: green;
+}
+
+.arrow-negative{
+    color: red;
+}
+
+.text-secondary{
+    color: $text-secondary;
+}
+
+.tag{
+    color: $color-tag;
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 5px;
+    background-color: $background-tag;
+}
+
