@@ -1,8 +1,12 @@
-<div class="grid-container margin-top-3">
-  <div class="grid-x grid-margin-x grid-margin-y">
-    <app-card-crypto class="cell small-12 medium-4"></app-card-crypto>
-    <app-card-crypto class="cell small-12 medium-4"></app-card-crypto>
-    <app-card-crypto class="cell small-12 medium-4"></app-card-crypto>
+<div class="grid-container">
+  <div class="grid-x grid-margin-y align-center margin-top-3">
+    <app-card-crypto *ngFor="let name of coinNameArray" [coin]="name" class="cell small-8 medium-4 large-2 margin-horizontal-2"></app-card-crypto>
+  </div>
+</div>
+
+<div class="grid-container container">
+  <div class="grid-x grid-margin-y align-center">
+
   </div>
 </div>
 
