@@ -10,8 +10,8 @@ export class CoinDataService {
   constructor(private _http: HttpClient) { }
 
 
-  getDataCoins(coin:string): Observable<any> { 
-    return this._http.get(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${coin}&tsyms=USD`);
+  getDataCoins(crypto:string): Observable<any> { 
+    return this._http.get(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${crypto}&tsyms=USD`);
   }
 
 

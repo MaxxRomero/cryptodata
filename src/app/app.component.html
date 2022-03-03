@@ -1,12 +1,15 @@
 <div class="grid-container-fluid">
-  <div class="grid-x grid-margin-y align-center margin-top-3">
-    <app-card-crypto *ngFor="let name of coinNameArray" [coin]="name" class="cell small-8 medium-4 large-2 margin-horizontal-2"></app-card-crypto>
+  <div class="grid-x grid-margin-y align-center-middle margin-top-3">
+    <app-card-crypto *ngFor="let name of coinNameArray" [crypto]="name" class="cell small-10 medium-4 large-2 margin-horizontal-1"></app-card-crypto>
   </div>
 </div>
 
 <div class="grid-container container">
-  <div class="grid-x grid-margin-y align-center">
-
+  <div class="grid-x">
+    <mat-tab-group  class="tab-group margin-top-1">
+      <mat-tab label="Mineros"> Content 1 </mat-tab>
+      <mat-tab label="Axie Infinity"> Content 2 </mat-tab>
+    </mat-tab-group>
   </div>
 </div>
 
