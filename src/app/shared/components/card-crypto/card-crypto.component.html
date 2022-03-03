@@ -1,13 +1,13 @@
 <mat-card class="example-card">
     <mat-card-title-group>
-      <mat-card-title >Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Small</mat-card-subtitle>
-      <img mat-card-sm-image [src]="img">
+      <mat-card-title >{{ data?.FROMSYMBOL }}  {{ data?.CHANGEPCT24HOUR }}</mat-card-title>
+      <mat-card-subtitle>{{ data?.PRICE }}</mat-card-subtitle>
+      <img mat-card-sm-image [src]="imgUrl">
     </mat-card-title-group>
     <mat-card-content>
     <div class="flex-container flex-dir-column margin-top-2">
-        <h4>Highest 24hs.</h4>
-        <h4>Lower 24hs.</h4>
+        <h4>Highest 24hs: {{ data?.HIGH24HOUR }}</h4>
+        <h4>Lower 24hs: {{ data?.LOW24HOUR }}</h4>
     </div>
     </mat-card-content>
   </mat-card>

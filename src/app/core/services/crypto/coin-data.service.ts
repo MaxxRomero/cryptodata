@@ -16,6 +16,6 @@ export class CoinDataService {
 
 
   getCryptoNames(): string[] {
-    return ['eth','slp','axs','ron']
+    return ['eth','slp','axs','ron'];
   }
 }
