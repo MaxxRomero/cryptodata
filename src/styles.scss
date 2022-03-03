@@ -8,4 +8,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-tab-label{
     color:$text-primary;
+    width: 20vw;
+    @media screen and(max-width: 1260px) {
+        width: 45vw;
+    }
 }
